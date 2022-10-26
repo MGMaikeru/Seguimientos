@@ -21,7 +21,6 @@ public class Main{
 		Main main = new Main(); 
 
 		int option = -1; 
-		System.out.println(main.banner());
 		do{
 
 			option = main.getOptionShowMenu(); 
@@ -54,39 +53,16 @@ public class Main{
 			"<< --------------------------------------------------------------------- >>\n" +
 			"<< -                                Welcome                            - >>\n" +
 			"<< --------------------------------------------------------------------- >>\n" +
-			"1. Registrar un edificio \n" +
-			"2. Agregar un apartamento a un edificio \n" + 
-			"3. Registrar a un dueño \n" +
-			"4. Registrar arrendatario \n" +
-			"5. Consultar apartamentos libres \n" +
-			"6. Consultar valor total mensual de los apartamentos alquilados de un edificio \n" +
-			"7. Consultar el estatus de un apartamento especifico \n" +
-			"8. Mostrar cantidad de apartamentosd arrendados por un dueño \n" +
-			"9. Calcular y mostrar valor mesual total de un dueño \n" +
-			"0. Salir del programa.\n"; 
-	}
-
-	private String banner(){
-		return
-			" " +  "\n"
-			+	"\n"	+	"                   ___..................____ "
-			+	"\n"	+	"            _..--''~_______   _____...----~~~\\ "
-			+	"\n"	+	"        __.'    .-'~       \\~      [_`.7     \\ "
-			+	"\n"	+	"  .---~~      .'            \\           __..--\\_ "
-			+	"\n"	+	" /             `-._          \\   _...~~~_..---~  ~~~~~~~~~~~~--.._ "
-			+	"\n"	+	" \\              /  ~~~~~~----_\\`-~_-~~__          ~~~~~~~---.._   ~--.__ "
-			+	"\n"	+	"  \\     _       |==            |   ~--___--------...__          `-  _.-- | "
-			+	"\n"	+	"   \\ __/.-._\\   |              |            ~~~~--.  `-._ ___...--_.'|_Y | "
-			+	"\n"	+	"    `--'|/~_\\  |              |     _____           _.~~~__..--~~_.-~~~.-~/ "
-			+	"\n"	+	"      | ||| |\\_|__            |.../.----.._.        | Y |__...--~~_.-~  _/ "
-			+	"\n"	+	"       ~\\\\ || ~|..__---____   |||||  .'~-. \\       |_..-----~~~~   _.~~ "
-			+	"\n"	+	"         \\`-'/ /     ~~~----...|'''|  |/\" \"\\ \\   |~~'           __.~ "
-			+	"\n"	+	"          `~~~'                 ~~-:  ||| ~| |\\  |        __..~~ "
-			+	"\n"	+	"                                    ~~|||  | | \\/  _.---~~ "
-			+	"\n"	+	"                                      \\\\  //  | ~~~ "
-			+	"\n"	+	"                                       \\`-'/  / dp "
-			+	"\n"	+	"                                        `~~~~' "
-			+	"\n"	+	" " ;
+			"1. Register building \n" +
+			"2. Add apartment to building \n" + 
+			"3. Register owner \n" +
+			"4. Register tenant \n" +
+			"5. Consult free apartments \n" +
+			"6. Consult total monthly value of the rented apartments of a building\n" +
+			"7. Consult status of a specific apartment \n" +
+			"8. Mostrar quantity of leased apartments of a specific owner \n" +
+			"9. Calculate and show monthly value of owner apartments \n" +
+			"0. Exit.\n"; 
 	}
 
 	public void buildingRegister(){
@@ -184,7 +160,7 @@ public class Main{
 		String numberId = reader.next();
 		int pos = controller.searchOwnerByNumberId(numberId);
 		if (pos == -1){
-			System.out.println("Type identification type:");
+			System.out.println("Type identification type:"); 
 			String typeId = reader.next();
 			System.out.println("Type owner name:");
 			String name = reader.next();
