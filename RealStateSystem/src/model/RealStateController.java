@@ -11,7 +11,7 @@ public class RealStateController{
 
 	public RealStateController(){
 		buildings = new Building[QUANTITY_BUILDINGS];
-		owners = new Owner[QUANTITY_OWNERS];
+		owners = new Person[QUANTITY_OWNERS];
 	}
 
 	public Building[] getBuildings(){
